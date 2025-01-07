@@ -1,31 +1,58 @@
-# Update-Help
+<# 1 Run Update-Help, and ensure that it completes without errors so that you have
+a copy of the help on your local computer. You need an internet connection #>
+Update-Help
 
-# Get-Process -id 2112 | ConvertTo-Html | Out-File test.html
+<# 2 Can you find any cmdlets capable of converting other cmdlets’ output into
+HTML? #>
+Get-Process -id 2112 | ConvertTo-Html | Out-File test.html
 
-# Out-File test.txt
+<# 3 Are there any cmdlets that can redirect output into a file? #>
+Out-File test.txt
 
-# Get-Process
+<# 4 How many cmdlets are available for working with processes? (Hint: Remember
+that cmdlets all use a singular noun.) #>
+Get-Process
 
-# Get-Command -Verb set -Noun psbreakpoint
+<# 5 What cmdlet might you use to set to a PowerShell breakpoint? (Hint: PowerShellspecific nouns are often prefixed with PS.) #>
+Get-Command -Verb set -Noun psbreakpoint
 
-# help alias
+<# 6 You’ve learned that aliases are nicknames for cmdlets. What cmdlets are available to create, modify, export, or import aliases? #>
+help alias
 
-# help-transcript
+<# 7 Is there a way to keep a transcript of everything you type in the shell, and save
+that transcript to a text file? #>
+help-transcript
 
-# help Get-Process –Parameter Name
+<# 8 Getting all processes can be overwhelming. How can you get processes by the
+name of the process? #>
+help Get-Process –Parameter Name
 
-# help Get-Process –Parameter IncludeUserName
+<# 9 Is there a way to tell Get-Process to tell you the user who started the process? #>
+help Get-Process –Parameter IncludeUserName
 
-# help Invoke-Command –Parameter hostname; help Invoke-Command –Parameter computername
+<# 10 Is there a way to run a command on a remote host? (Hint: Invoke is the verb for running something now.) #>
+help Invoke-Command –Parameter hostname; help Invoke-Command –Parameter computername
 
-# Help Out-File –Full; Help Out-File –Parameter Width
+<# 11 Examine the help file for the Out-File cmdlet. The files created by this cmdlet
+default to a width of how many characters? Is there a parameter that would
+enable you to change that width? #>
+Help Out-File –Full; Help Out-File –Parameter Width
 
-# If you run Help Out-File –Full and look at parameters, you should see -NoClobber
+<# 12 By default, Out-File overwrites any existing file that has the same filename as
+what you specify. Is there a parameter that would prevent the cmdlet from overwriting an existing file? #>
+<# If you run #> Help Out-File –Full <# and look at parameters, you should see -NoClobber #>
 
-# Get-Alias
+<# 13 How could you see a list of all aliases defined in PowerShell? #>
+Get-Alias
 
-# Gcm -na *process*
+<# 14 Using both an alias and abbreviated parameter names, what is the shortest command line you could type to retrieve a list of commands with the word process in
+the name? #>
+Gcm -na *process*
 
-# Get-Command –Noun object
+<# 15 How many cmdlets are available that can deal with generic objects? (Hint:
+Remember to use a singular noun like object rather than a plural one like objects.)  #>
+Get-Command –Noun object
 
-# help about_arrays; help *array*
+<# 16 This chapter briefly mentioned arrays. What help topic could tell you more
+about them? #>
+help about_arrays; help *array*

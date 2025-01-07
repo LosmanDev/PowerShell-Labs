@@ -14,11 +14,11 @@ stop? Is it possible to stop a job without using Get-Job at all? #>
 
 <# 4 What if you want to create a pipe-delimited file instead of a CSV file? You’d still
 use the Export-CSV command, but what parameters would you specify?#>
-<# You need to specify the -Delimiter parameter with the pipe character (|)#>
+get-Command | Export-CSV commands.CSV -Delimiter "|"
 
 <# 5 How do you include the type information in the # comment line at the top of
 an exported CSV file? #>
-<# Use the #> –IncludeTypeInformation <# parameter with #> Export-CSV.
+–IncludeTypeInformation <# parameter with #> Export-CSV.
 
 <# 6 Export-Clixml and Export-CSV both modify the system because they can create and overwrite files. What parameter would prevent them from overwriting
 an existing file? What parameter would ask whether you were sure before proceeding to write the output file? #>
